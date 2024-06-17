@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Scrollbar</title>
+    <style>
+        /* WebKit Browsers */
+        /* ::-webkit-scrollbar {
+            width: 12px;
+            height: 12px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #923c3c;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #e71515;
+            border-radius: 6px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #bd0b0b;
+        } */
+
+        /* Firefox */
+        * {
+            scrollbar-width: thin;
+            scrollbar-color: #e21010 #f7f6fa;
+        }
+
+        /* Internet Explorer and Edge Legacy */
+        body {
+            height: 5000px;
+
+
+        }
+
+        /* Optional: To ensure the custom scrollbar is visible for the example */
+        .content {
+            height: 200px;
+            overflow-y: scroll;
+        }
+
+        .scrollup {
+            position: fixed;
+            right: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec odio ipsum. Suspendisse cursus
+            malesuada facilisis. Nunc consectetur sem id porttitor interdum. Suspendisse volutpat et risus non tempor.
+            Curabitur luctus erat erat, non placerat velit elementum ut. Nulla facilisi. Cras ultrices sagittis orci nec
+            facilisis. Mauris id lectus auctor, aliquam ipsum ac, mattis sem.</p>
+        <p>Sed vestibulum, ligula id interdum laoreet, nisl nunc fermentum ligula, vitae dapibus magna urna sed erat.
+            Nam malesuada enim vitae scelerisque varius. Nulla facilisi. Fusce volutpat magna a mi fermentum, a lacinia
+            lorem scelerisque. Suspendisse potenti. Cras tempus cursus ex, eget varius metus facilisis non. In eu felis
+            eu turpis bibendum condimentum quis at erat.</p>
+    </div>
+    <div class="scrollup">
+        <a href="#"><button type="button">up</button></a>
+    </div>
+</body>
+
+</html>

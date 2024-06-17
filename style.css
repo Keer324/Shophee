@@ -4,11 +4,89 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scrollbar-width: 20px;
+    scrollbar-color: coral #f7f6fa;
+
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #000;
 }
 
 body {
     font-family: "Poppins", sans-serif;
 }
+
+/* body,
+html {
+    overflow-x: hidden;
+} */
+
+/* -----Scrollbar-------- */
+.scrollup {
+    position: fixed;
+    right: 0;
+    top: 600px;
+    z-index: 9999;
+    font-size: 30px;
+    border-radius: 6px;
+    height: 45px;
+    width: 42px;
+}
+
+.scrollup:hover {
+    filter: brightness(90%);
+}
+
+
+/* toast notification */
+.notification-toast {
+    position: fixed;
+    bottom: 80px;
+    left: 20px;
+    right: 20px;
+    background: white;
+    max-height: 100px;
+    max-width: 350px;
+    box-shadow: 0 5px 20px hsla(0, 0%, 0%, 0.15);
+    transition: 0.5s ease-in-out;
+    z-index: 5;
+    animation: slideInOut 10s ease-in-out infinite;
+}
+
+@keyframes slideInOut {
+
+    0%,
+    45%,
+    100% {
+        transform: translateX(calc(-100% - 40px));
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    50%,
+    95% {
+        transform: translateX(0);
+        opacity: 1;
+        visibility: visible;
+    }
+
+}
+
+
+.toast-banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+
+
+
+
+
+
+
 
 h1 {
     font-size: 2.5rem;
@@ -114,6 +192,51 @@ hr {
     color: #fff;
 }
 
+/* about pages */
+#page-header.about-header {
+    background-image: url("img/about/banner.png");
+    height: 250px;
+    background-size: cover;
+
+}
+
+#about-app .video {
+    width: 70%;
+}
+
+#about-app .video video {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.row-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 10%;
+    column-gap: 2px;
+    row-gap: 2px;
+
+}
+
+.border {
+    border: 2px solid black;
+    height: 150px;
+}
+
+
+/* contact page */
+
+#contact-details .map {
+    width: 100%;
+    height: 300px;
+}
+
+#contact-details .map iframe {
+    width: 100%;
+    height: 100%;
+}
+
+
 @media only screen and (max-width:991px) {
 
     body>nav>div>button:hover,
@@ -135,6 +258,38 @@ hr {
 
     #navbarSupportedContent>ul>li:nth-child(n)>a {
         padding: 10px 0;
+    }
+}
+
+
+@media screen and (max-width:768px) {
+    .row-container {
+        margin-left: 17%;
+    }
+
+    .container-img {
+        margin-top: 100px;
+
+    }
+
+
+}
+
+@media screen and (max-width:425px) {
+    .row-container {
+        margin-left: 10%;
+    }
+}
+
+@media screen and (max-width:375px) {
+    .row-container {
+        margin-left: 7%;
+    }
+}
+
+@media screen and (max-width:320px) {
+    .row-container {
+        margin-left: 23%;
     }
 }
 
