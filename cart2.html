@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <style>
+        #navbarSupportedContent>ul>li:nth-child(7)>a {
+            color: coral;
+        }
+
+        body {
+            font-family: 'poppins', sans-serif;
+            font-size: 18px;
+            /* color: black; */
+        }
+
+        .button-sm {
+            width: 60%;
+            height: 100px;
+            position: relative;
+            border: none;
+            border-radius: 10px;
+            background-color: coral;
+            padding: 4px 25px;
+            cursor: pointer;
+            color: wheat;
+        }
+
+        /* .cart p {
+            height: 22px;
+            width: 22px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 22px;
+            background-color: coral;
+            color: white;
+        } */
+
+        .bg-warningg {
+            background-color: coral;
+        }
+
+        .inputt {
+            width: 20px;
+        }
+
+
+        .containerrr form {
+            width: 100%;
+            border: 2px solid rgb(8, 8, 19);
+            border-radius: 7px;
+            display: flex;
+            align-items: center;
+        }
+
+        .container form input {
+            border: none;
+            outline: none;
+            box-shadow: none;
+            width: 100%;
+            font-size: 16px;
+            font-weight: 600;
+            padding: 7px 10px;
+        }
+
+        .containerrr form {
+            margin-left: 90px;
+            padding-left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- navigation -->
+    <nav class="navbar navbar-light  bg-white navbar-expand-lg py-3 fixed-top">
+        <div class="container">
+            <img src="img/logo1.png" alt="">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <i id="bar" class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link mr-3 text-dark" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mr-4 text-dark" href="shop.html">Shop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mr-4 text-dark" href="blog.html">Blogs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mr-4 text-dark" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mr-4 text-dark" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <i class="fal fa-search"></i>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active position-relative bg-light" href="cart2.html"><i
+                                class="fal fa-shopping-bag bg-light"></i>
+                            <span
+                                class="position-absolute top-0 start-75 translate-middle badge rounded-pill bg-warningg text-light"
+                                id="count">0</span>
+                        </a>
+                    </li>
+                    <!-- <li class="nav-item cart">
+                        <p id="count">0</p>
+                    </li> -->
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+    <section id="blog-home" class="pt-5 mt-5 container mb-3">
+        <div class="row">
+            <h2 class="font-weight-bold pt-5">Shoping Cart</h2>
+            <div class="containerrr pt-5">
+                <form class="">
+                    <i class="bi bi-search"></i>
+                    <input type="text" id="search-item" placeholder="search products" onkeyup="search()">
+                </form>
+            </div>
+        </div>
+
+
+    </section>
+
+
+    <div class="containerr container">
+        <div id="root"></div>
+        <div class="sidebar">
+            <div class="head">
+                <p>My cart</p>
+            </div>
+            <div id="cartItem">Your cart is empty</div>
+            <div class="foot">
+                <h5>Total</h5>
+                <h5 id="total">₹ 0.00</h5>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- <input class="w-25 pl-1" value="1" type="number"> -->
+</body>
+
+<footer class="mt-5 py-5">
+    <div class="row container mx-auto pt-5">
+        <div class="footer-one col-lg-3 col-md-6 col-12">
+            <img src="img/logo2.png" alt="">
+            <p class="pt-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam, deleniti.</p>
+        </div>
+        <div class="footer-one col-lg-3 col-md-6 col-12 mb-3">
+            <h5 class="pb-2">Featured</h5>
+            <ul class="text-uppercase list-unstyled">
+                <li><a href="#">men</a></li>
+                <li><a href="#">women</a></li>
+                <li><a href="#">boys</a></li>
+                <li><a href="#">girls</a></li>
+                <li><a href="#">new arrivals</a></li>
+                <li><a href="#">shoes</a></li>
+                <li><a href="#">cloths</a></li>
+            </ul>
+        </div>
+        <div class="footer-one col-lg-3 col-md-6 col-12">
+            <h5 class="pb-2">Contact Us</h5>
+            <div>
+                <h6 class="text-uppercase">Address</h6>
+                <p>123 STREET NAME, CITY, US</p>
+            </div>
+            <div>
+                <h6 class="text-uppercase">Phone</h6>
+                <p>(+91) 964838922</p>
+            </div>
+            <div>
+                <h6 class="text-uppercase">Email</h6>
+                <p>keerthimoger@gmail.com</p>
+            </div>
+        </div>
+        <div class="footer-one col-lg-3 col-md-6 col-12">
+            <h5 class="pb-2">Instagram</h5>
+            <div class="row">
+                <img src="img/insta/1.jpg" alt="" class="img-fluid w-25 h-100 m-2">
+                <img src="img/insta/2.jpg" alt="" class="img-fluid w-25 h-100 m-2">
+                <img src="img/insta/3.jpg" alt="" class="img-fluid w-25 h-100 m-2">
+                <img src="img/insta/4.jpg" alt="" class="img-fluid w-25 h-100 m-2">
+                <img src="img/insta/5.jpg" alt="" class="img-fluid w-25 h-100 m-2">
+            </div>
+        </div>
+    </div>
+    <div class="copyright mt-5">
+        <div class="row container mx-auto">
+
+            <div class="col-lg-3 col-md-6 col-12 mb-4">
+                <img src="img/payment.png" alt="">
+            </div>
+            <div class="col-lg-4 col-md-6 col-12 text-nowrap mb-2">
+                <p>Shophee &copy; 2024. All rights reserver</p>
+            </div>
+            <div class="col-lg-4 col-md-6 col-12">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+<script src="scripts.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
